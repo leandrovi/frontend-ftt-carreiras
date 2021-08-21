@@ -1,5 +1,5 @@
 <template>
-  <div class="jobs">
+  <div class="information">
     <section class="container">
       <div class="row">
         <div class="col-12">
@@ -56,35 +56,5 @@ a {
 .conteudo {
   background: #f2f2f2;
   margin: 25px 87px 0 93px;
-}
-
-.row {
-  display: flex;
-}
-
-.footer-card {
-  padding-left: 33px;
-  padding-bottom: 33px;
-}
-
-.img {
-  margin-right: 14px;
-}
-
-.col-4 {
-  width: 33%;
-}
-
-/* responsividade */
-@media (max-width: 768px) {
-  .col-4 {
-    width: 50%;
-  }
-}
-
-@media (max-width: 425px) {
-  .col-4 {
-    width: 100%;
-  }
 }
 </style>
