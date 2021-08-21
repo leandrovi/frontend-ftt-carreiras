@@ -39,7 +39,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 h2 {
   font-style: normal;
   font-weight: normal;

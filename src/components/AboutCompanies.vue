@@ -43,7 +43,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 h2 {
   font-style: normal;
   font-weight: normal;
@@ -75,7 +75,6 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 26px;
-  margin-left: 12%;
   text-decoration: none;
 }
 

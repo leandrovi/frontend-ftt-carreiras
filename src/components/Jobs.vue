@@ -18,19 +18,31 @@
             <div class="row footer-card">
               <div class="link-text">
                 <a href>
-                  <img src="../assets/email.png" alt="emailCompany" class="img" />email@gmail.com
+                  <img
+                    src="../assets/email.png"
+                    alt="emailCompany"
+                    class="img"
+                  />email@gmail.com
                 </a>
               </div>
 
               <div class="link-text">
                 <a href>
-                  <img src="../assets/link.png" alt="linkCompany" class="img" />processoseletivonestle.com
+                  <img
+                    src="../assets/link.png"
+                    alt="linkCompany"
+                    class="img"
+                  />processoseletivonestle.com
                 </a>
               </div>
 
               <div class="link-text">
                 <a href>
-                  <img src="../assets/person.png" alt="person" class="img" />Estágio
+                  <img
+                    src="../assets/person.png"
+                    alt="person"
+                    class="img"
+                  />Estágio
                 </a>
               </div>
             </div>
@@ -41,21 +53,30 @@
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              type and scrambled it to make a type specimen book.Lorem Ipsum is
+              simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the
+              1500s, when an unknown printer took a galley of type and scrambled
+              it to make a type specimen book.
             </p>
             <div class="row footer-card">
               <div class="link-text">
                 <a href>
-                  <img src="../assets/email.png" alt="emailCompany" class="img" />email@gmail.com
+                  <img
+                    src="../assets/email.png"
+                    alt="emailCompany"
+                    class="img"
+                  />email@gmail.com
                 </a>
               </div>
 
               <div class="link-text">
                 <a href>
-                  <img src="../assets/link.png" alt="linkCompany" class="img" />processoseletivonestle.com
+                  <img
+                    src="../assets/link.png"
+                    alt="linkCompany"
+                    class="img"
+                  />processoseletivonestle.com
                 </a>
               </div>
 
@@ -77,13 +98,21 @@
             <div class="row footer-card">
               <div class="link-text">
                 <a href>
-                  <img src="../assets/email.png" alt="emailCompany" class="img" />email@gmail.com
+                  <img
+                    src="../assets/email.png"
+                    alt="emailCompany"
+                    class="img"
+                  />email@gmail.com
                 </a>
               </div>
 
               <div class="link-text">
                 <a href>
-                  <img src="../assets/link.png" alt="linkCompany" class="img" />processoseletivonestle.com
+                  <img
+                    src="../assets/link.png"
+                    alt="linkCompany"
+                    class="img"
+                  />processoseletivonestle.com
                 </a>
               </div>
 
@@ -105,7 +134,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 h2 {
   font-family: Poppins;
   font-style: normal;

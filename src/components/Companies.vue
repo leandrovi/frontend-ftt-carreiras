@@ -10,9 +10,7 @@
             <img src="../assets/nestle.png" alt="" />
             <div class="background-companie"></div>
             <div class="name-companies">Nestle</div>
-            
           </div>
-          
         </a>
         <div class="logo-companies">
           <img src="../assets/pepsi.png" alt="" />
@@ -54,7 +52,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 .companies-container {
   margin-top: 120px;
 }
@@ -92,7 +90,7 @@ export default {};
   -o-transform: scale(1.1) skew(-22deg, 0deg);
   -ms-transform: scale(1.1) skew(-22deg, 0deg);
   transform: scale(1.1) skew(-22deg, 0deg);
-  border: 6px solid #FC632F;
+  border: 6px solid #fc632f;
   width: 200px;
   height: 100px;
   position: relative;
