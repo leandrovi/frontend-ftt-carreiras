@@ -20,7 +20,7 @@ export default {
 <style>
 * {
   border: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
