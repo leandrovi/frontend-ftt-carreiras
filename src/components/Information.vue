@@ -38,16 +38,14 @@ h2 {
   font-weight: normal;
   font-size: 36px;
   line-height: 45px;
-  margin-left: 93px;
 }
 
 p {
   color: #757575;
-  padding: 40px 4px 55px 33px;
+  padding: 30px 35px;
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
   line-height: 26px;
 }
 
@@ -56,8 +54,31 @@ a {
   color: #757575;
 }
 
+.container {
+  margin: 60px 90px 0 90px;
+}
+
 .conteudo {
+  margin-top: 30px;
   background: #f2f2f2;
-  margin: 25px 87px 0 93px;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .container {
+    margin: 0 40px 0 40px;
+  }
+
+  .conteudo {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
 }
 </style>
