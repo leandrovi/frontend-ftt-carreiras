@@ -104,6 +104,10 @@ p {
     flex-wrap: wrap;
   }
 
+  .conteudo {
+    margin-top: 10px;
+  }
+
   .info {
     margin: 35px 0 0 0 !important;
   }
