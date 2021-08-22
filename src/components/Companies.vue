@@ -153,6 +153,19 @@ export default {};
   -o-transition: opacity 0.7s ease-out;
 }
 
+/* .companies .company-group:nth-child(4n+1) .logo-companies:hover .background-companie {
+  border: 5px solid #fc632f;
+} */
+.companies .company-group:nth-child(4n+2) .logo-companies:hover .background-companie {
+  border: 5px solid #F9CA24;
+}
+.companies .company-group:nth-child(4n+3) .logo-companies:hover .background-companie {
+  border: 5px solid #41BCCE;
+}
+.companies .company-group:nth-child(4n+4) .logo-companies:hover .background-companie {
+  border: 5px solid #72B73B;
+}
+
 .companies .logo-companies img {
   max-width: 240px;
   position: absolute;
