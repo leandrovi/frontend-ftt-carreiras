@@ -5,43 +5,77 @@
         <h1>Empresas<span> participantes</span></h1>
       </div>
       <div class="companies">
-        <a>
-          <div class="logo-companies">
-            <img src="../assets/nestle.png" alt="" />
-            <div class="background-companie"></div>
-            <div class="name-companies">Nestle</div>
-          </div>
-        </a>
-        <div class="logo-companies">
-          <img src="../assets/pepsi.png" alt="" />
-          <p class="name-companies">Pepsi</p>
+        <div class="company-group">
+          <a>
+            <div class="logo-companies">
+              <img src="../assets/nestle.png" alt="img-empresa" />
+              <div class="background-companie"></div>
+            </div>
+          </a>
+          <div class="name-companies">Nestle</div>
         </div>
-        <div class="logo-companies">
-          <img src="../assets/microsoft.png" alt="" />
-          <p class="name-companies">Microsoft</p>
+        <div class="company-group">
+          <a>
+            <div class="logo-companies">
+              <img src="../assets/pepsi.png" alt="" />
+              <div class="background-companie"></div>
+            </div>
+          </a>
+          <div class="name-companies">Pepsi</div>
         </div>
-        <div class="logo-companies">
-          <img src="../assets/coca.png" alt="" />
-          <p class="name-companies">Coca</p>
+        <div class="company-group">
+          <a>
+            <div class="logo-companies">
+              <img src="../assets/microsoft.png" alt="" />
+              <div class="background-companie"></div>
+            </div>
+          </a>
+          <div class="name-companies">Microsoft</div>
         </div>
-      </div>
-
-      <div class="companies">
-        <div class="logo-companies">
-          <img src="../assets/nestle.png" alt="" />
-          <p class="name-companies">Nestle</p>
+        <div class="company-group">
+          <a>
+            <div class="logo-companies">
+              <img src="../assets/coca.png" alt="" />
+              <div class="background-companie"></div>
+            </div>
+          </a>
+          <div class="name-companies">Coca-cola</div>
         </div>
-        <div class="logo-companies">
-          <img src="../assets/pepsi.png" alt="" />
-          <p class="name-companies">Pepsi</p>
+        <div class="company-group">
+          <a>
+            <div class="logo-companies">
+              <img src="../assets/nestle.png" alt="" />
+              <div class="background-companie"></div>
+            </div>
+          </a>
+          <div class="name-companies">Nestle</div>
         </div>
-        <div class="logo-companies">
-          <img src="../assets/microsoft.png" alt="" />
-          <p class="name-companies">Microsoft</p>
+        <div class="company-group">
+          <a>
+            <div class="logo-companies">
+              <img src="../assets/pepsi.png" alt="" />
+              <div class="background-companie"></div>
+            </div>
+          </a>
+          <div class="name-companies">Pepsi</div>
         </div>
-        <div class="logo-companies">
-          <img src="../assets/coca.png" alt="" />
-          <p class="name-companies">Coca</p>
+        <div class="company-group">
+          <a>
+            <div class="logo-companies">
+              <img src="../assets/microsoft.png" alt="" />
+              <div class="background-companie"></div>
+            </div>
+          </a>
+          <div class="name-companies">Microsoft</div>
+        </div>
+        <div class="company-group">
+          <a>
+            <div class="logo-companies">
+              <img src="../assets/coca.png" alt="" />
+              <div class="background-companie"></div>
+            </div>
+          </a>
+          <div class="name-companies">Coca-cola</div>
         </div>
       </div>
     </div>
@@ -76,6 +110,14 @@ export default {};
   align-items: center;
   flex-wrap: wrap;
 }
+
+.companies .company-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .companies .logo-companies {
   width: 315px;
   height: 150px;
@@ -83,6 +125,7 @@ export default {};
   align-items: center;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .companies .logo-companies:hover .background-companie {
   -moz-transform: scale(1.1) skew(-22deg, 0deg);
@@ -90,11 +133,12 @@ export default {};
   -o-transform: scale(1.1) skew(-22deg, 0deg);
   -ms-transform: scale(1.1) skew(-22deg, 0deg);
   transform: scale(1.1) skew(-22deg, 0deg);
-  border: 6px solid #fc632f;
-  width: 200px;
+  border: 5px solid #fc632f;
+  width: 220px;
   height: 100px;
   position: relative;
 }
+
 .companies .logo-companies img {
   max-width: 240px;
   position: absolute;
@@ -102,6 +146,7 @@ export default {};
 .companies .name-companies {
   color: #757575;
   font-size: 13px;
+  margin-top: -15px;
 }
 @media (max-width: 768px) {
   .companies .logo-companies {

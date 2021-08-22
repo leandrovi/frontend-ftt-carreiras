@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main-about">
-      <h1><span>Sobre</span> o evento</h1>
+      <h1 class="title-about"><span>Sobre</span> o evento</h1>
       <div class="about">
         <p class="text-about">
           O <b>FTT Carreiras</b> é um evento que auxilia o jovem universitário a
@@ -19,9 +19,11 @@
             <h1>1,5 mil</h1>
             <p>estudantes universitários</p>
           </div>
+          <div class="info-img">
+            <img class="linhas-vermelhas" src="../assets/linhas-vermelho.png" alt="linhas-vermelhas"/>
+          </div>
         </div>
       </div>
-      <img class="linhas-vermelhas" src="../assets/linhas-vermelho.png" alt="linhas-vermelhas"/>
     </div>
   </div>
 </template>
@@ -32,7 +34,7 @@ export default {};
 
 <style scoped>
 .main-about {
-  margin: 65px 90px 0px 90px;
+  margin: 65px 0 0 90px;
 }
 
 .main-about h1 {
@@ -55,6 +57,7 @@ export default {};
   width: 100%;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .about p {
@@ -63,9 +66,10 @@ export default {};
 
 .infos {
   display: flex;
-  justify-content: space-evenly;
   width: 50%;
   min-width: 353px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .info-about {
@@ -84,34 +88,33 @@ export default {};
 .info-about p {
   font-size: 13px;
   width: 100%;
-}
-
-.linhas-vermelhas{
-  position: absolute;
-  right: 0;
-  top: 110%;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .main-about {
-    margin: 60px 40px 0px 40px;
+    margin: 0px 40px 0px 0px;
   }
 
   .main-about h1 {
     font-size: 24px;
   }
 
+  .main-about .title-about{
+    margin-left: 40px;
+  }
+
   .about p.text-about {
     width: 100%;
     padding-bottom: 50px;
     font-size: 13px;
+    margin-left: 40px;
   }
 
-  .infos {
-    justify-content: space-between;
-    width: 100%;
+  .infos{
+    flex-direction: row-reverse;
+    width: 80%;
     min-width: unset;
-    margin-left: 55px;
   }
 
   .info-about h1 {
@@ -123,10 +126,15 @@ export default {};
   }
 
   .linhas-vermelhas{
-    left: 0;
-    width: 90px;
+    width: 80px;
     transform: rotateX(360deg) rotateY(180deg);
-    top: 141%;
   }
 }
+
+@media (max-width: 425px) {
+  .infos{
+    width: 100%;
+  }
+}
+
 </style>
