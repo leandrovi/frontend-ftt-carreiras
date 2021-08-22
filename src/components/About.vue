@@ -3,7 +3,7 @@
     <div class="main-about">
       <h1><span>Sobre</span> o evento</h1>
       <div class="about">
-        <p>
+        <p class="text-about">
           O <b>FTT Carreiras</b> é um evento que auxilia o jovem universitário a
           conhecer diferentes trilhas de carreiras e permite a aproximação do
           estudante com as oportunidades profissionais do mercado de trabalho.
@@ -21,6 +21,7 @@
           </div>
         </div>
       </div>
+      <img class="linhas-vermelhas" src="../assets/linhas-vermelho.png" alt="linhas-vermelhas"/>
     </div>
   </div>
 </template>
@@ -85,6 +86,12 @@ export default {};
   width: 100%;
 }
 
+.linhas-vermelhas{
+  position: absolute;
+  right: 0;
+  top: 110%;
+}
+
 @media (max-width: 768px) {
   .main-about {
     margin: 60px 40px 0px 40px;
@@ -94,16 +101,17 @@ export default {};
     font-size: 24px;
   }
 
-  .about p {
+  .about p.text-about {
     width: 100%;
     padding-bottom: 50px;
     font-size: 13px;
   }
 
   .infos {
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
-    min-width: 353px;
+    min-width: unset;
+    margin-left: 55px;
   }
 
   .info-about h1 {
@@ -112,6 +120,13 @@ export default {};
 
   .info-about p {
     font-size: 10px;
+  }
+
+  .linhas-vermelhas{
+    left: 0;
+    width: 90px;
+    transform: rotateX(360deg) rotateY(180deg);
+    top: 141%;
   }
 }
 </style>

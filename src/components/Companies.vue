@@ -54,7 +54,7 @@ export default {};
 
 <style scoped>
 .companies-container {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .title-companies {
   display: flex;
