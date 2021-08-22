@@ -127,6 +127,7 @@ export default {};
   flex-direction: column;
   cursor: pointer;
 }
+
 .companies .logo-companies:hover .background-companie {
   -moz-transform: scale(1.1) skew(-22deg, 0deg);
   -webkit-transform: scale(1.1) skew(-22deg, 0deg);
@@ -137,6 +138,19 @@ export default {};
   width: 220px;
   height: 100px;
   position: relative;
+  opacity: 1;
+  transition: opacity 0.7s ease-out;
+  -moz-transition: opacity 0.7 ease-out;
+  -webkit-transition: opacity 0.7s ease-out;
+  -o-transition: opacity 0.7s ease-out;
+}
+
+.background-companie {
+  opacity: 0;
+  transition: opacity 0.7s ease-out;
+  -moz-transition: opacity 0.7 ease-out;
+  -webkit-transition: opacity 0.7s ease-out;
+  -o-transition: opacity 0.7s ease-out;
 }
 
 .companies .logo-companies img {

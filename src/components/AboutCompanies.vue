@@ -80,7 +80,7 @@ p {
 
 .container {
   margin: 0 90px 0 90px;
-  padding-top: 160px;
+  padding-top: 60px;
 }
 
 .row {

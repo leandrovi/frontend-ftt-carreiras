@@ -171,7 +171,6 @@ a {
 .footer-card {
   padding-left: 33px;
   padding-bottom: 33px;
-  padding-right: 67px;
 }
 
 .img {
