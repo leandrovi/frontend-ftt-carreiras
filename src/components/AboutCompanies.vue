@@ -115,6 +115,7 @@ p {
 
   .container {
     margin: 0 40px;
+    padding-top: 0;
   }
 
   .container p {
