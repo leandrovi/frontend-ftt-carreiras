@@ -208,6 +208,7 @@ a {
 
   .container {
     margin: 30px 40px 0 40px;
+    padding-top: 0;
   }
 
   .conteudo {
