@@ -1,15 +1,18 @@
 <template>
   <div>
     <div class="main-about">
-      <h1 class="title-about"><span>Sobre</span> o evento</h1>
       <div class="about">
-        <p class="text-about">
-          O <b>FTT Carreiras</b> é um evento que auxilia o jovem universitário a
-          conhecer diferentes trilhas de carreiras e permite a aproximação do
-          estudante com as oportunidades profissionais do mercado de trabalho.
-          Ao mesmo tempo, colabora para que empresas de diversos segmentos
-          compartilhem suas expectativas com a nova geração de talentos.
-        </p>
+        <div class="group-about">
+          <h1 class="title-about"><span>Sobre</span> o evento</h1>
+          <p class="text-about">
+            O <b>FTT Carreiras</b> é um evento que auxilia o jovem universitário
+            a conhecer diferentes trilhas de carreiras e permite a aproximação
+            do estudante com as oportunidades profissionais do mercado de
+            trabalho. Ao mesmo tempo, colabora para que empresas de diversos
+            segmentos compartilhem suas expectativas com a nova geração de
+            talentos.
+          </p>
+        </div>
         <div class="infos">
           <div class="info-about">
             <h1>5ª</h1>
@@ -20,7 +23,11 @@
             <p>estudantes universitários</p>
           </div>
           <div class="info-img">
-            <img class="linhas-vermelhas" src="../assets/linhas-vermelho.png" alt="linhas-vermelhas"/>
+            <img
+              class="linhas-vermelhas"
+              src="../assets/linhas-vermelho.png"
+              alt="linhas-vermelhas"
+            />
           </div>
         </div>
       </div>
@@ -41,6 +48,7 @@ export default {};
   font-weight: normal;
   color: #212121;
   font-size: 40px;
+  width: fit-content;
   padding-bottom: 20px;
 }
 
@@ -52,6 +60,10 @@ export default {};
   color: #757575;
 }
 
+.group-about {
+  width: 50%;
+}
+
 .about {
   display: flex;
   width: 100%;
@@ -61,7 +73,7 @@ export default {};
 }
 
 .about p {
-  width: 40%;
+  width: 80%;
 }
 
 .infos {
@@ -93,28 +105,36 @@ export default {};
 
 @media (max-width: 768px) {
   .main-about {
-    margin: 0px 40px 0px 0px;
+    margin: 0px;
   }
 
   .main-about h1 {
     font-size: 24px;
   }
 
-  .main-about .title-about{
+  .main-about .title-about {
     margin-left: 40px;
+  }
+
+  .about p {
+    width: unset;
   }
 
   .about p.text-about {
-    width: 100%;
     padding-bottom: 50px;
     font-size: 13px;
-    margin-left: 40px;
+    margin: 0 40px;
   }
 
-  .infos{
+  .group-about {
+    width: unset;
+  }
+
+  .infos {
     flex-direction: row-reverse;
     width: 80%;
     min-width: unset;
+    margin-right: 60px;
   }
 
   .info-about h1 {
@@ -125,16 +145,15 @@ export default {};
     font-size: 10px;
   }
 
-  .linhas-vermelhas{
+  .linhas-vermelhas {
     width: 80px;
     transform: rotateX(360deg) rotateY(180deg);
   }
 }
 
 @media (max-width: 425px) {
-  .infos{
+  .infos {
     width: 100%;
   }
 }
-
 </style>

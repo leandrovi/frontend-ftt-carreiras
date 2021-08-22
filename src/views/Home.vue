@@ -2,7 +2,7 @@
   <div>
     <Introduction />
     <About />
-    <Companies />
+    <Companies :empresas="empresas" />
   </div>
 </template>
 
@@ -16,6 +16,22 @@ export default {
     Introduction,
     About,
     Companies,
+  },
+  data() {
+    return {
+      empresas: [],
+    };
+  },
+  methods: {
+    async fetchEmpresas() {
+      const res = await fetch("https://ftt-carreiras.herokuapp.com/empresas");
+      const data = await res.json();
+      return data;
+    },
+  },
+  async created() {
+    this.empresas = await this.fetchEmpresas();
+    console.log("--->", this.empresas);
   },
 };
 </script>
