@@ -7,13 +7,7 @@
 
           <div class="conteudo">
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s.
+              {{ empresa.description }}
             </p>
           </div>
         </div>
@@ -24,13 +18,7 @@
           </h2>
           <div class="conteudo">
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s.
+              {{ empresa.reason }}
             </p>
           </div>
         </div>
@@ -40,7 +28,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    empresa: Object,
+  },
+};
 </script>
 
 <style scoped>

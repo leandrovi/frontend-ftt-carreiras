@@ -5,17 +5,19 @@
         <img src="../assets/linhas-esquerda.png" alt="linhas" />
       </div>
       <div class="headerCompany-info">
-        <h2>Nestlé</h2>
-        <a href="https://www.nestle.com.br/">
-          https://www.nestle.com.br/
+        <h2>{{ empresa.name }}</h2>
+        <a :href="empresa.company_url" target="_blank">
+          {{ empresa.company_url }}
         </a>
         <div class="imagem">
-          <img src="../assets/nestle.png" />
+          <img :src="url + empresa.logo.url" />
         </div>
-        <div class="link">
+        <div class="link" :class="displayClass(empresa.video_url)">
           <p>
             Assista o vídeo para conhecer mais sobre a empresa!
-            <a href=""><strong>Clique aqui.</strong></a>
+            <a :href="empresa.video_url" target="_blank"
+              ><strong>Clique aqui.</strong></a
+            >
           </p>
         </div>
       </div>
@@ -28,13 +30,24 @@
 
 <script>
 export default {
-  created() {
-    console.log("--->", this.empresa);
+  name: "HeaderCompany",
+  props: {
+    empresa: Object,
+    url: String,
+  },
+  methods: {
+    displayClass(text) {
+      return !text ? "display-none" : "";
+    },
   },
 };
 </script>
 
 <style scoped>
+.display-none {
+  display: none;
+}
+
 .conteudo {
   display: flex;
   justify-content: center;

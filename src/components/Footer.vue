@@ -3,13 +3,27 @@
     <footer>
       <div class="main-footer">
         <div class="logos-ftt">
-          <a href="#"><img src="../assets/logo-ftt.png" alt="logo-ftt"/></a>
-          <a href="#"><img src="../assets/logo-cebas.png" alt="logo-cebas"/></a>
+          <a href="http://ftt.com.br/home/" target="_blank"
+            ><img src="../assets/logo-ftt.png" alt="logo-ftt"
+          /></a>
+          <a
+            href="http://ftt.com.br/home/wp-content/uploads/2020/02/certificado_cebas.pdf"
+            target="_blank"
+            ><img src="../assets/logo-cebas.png" alt="logo-cebas"
+          /></a>
         </div>
         <div class="redes-ftt">
-          <a href="#"><img src="../assets/face-ftt.png" alt="face-ftt"/></a>
-          <a href="#"><img src="../assets/insta-ftt.png" alt="insta-ftt"/></a>
-          <a href="#"><img src="../assets/in-ftt.png" alt="linkedin-ftt"/></a>
+          <a href="https://www.facebook.com/FaculdadeFTT" target="_blank"
+            ><img src="../assets/face-ftt.png" alt="face-ftt"
+          /></a>
+          <a href="https://www.instagram.com/faculdadeftt/" target="_blank"
+            ><img src="../assets/insta-ftt.png" alt="insta-ftt"
+          /></a>
+          <a
+            href="https://www.linkedin.com/school/faculdade-de-tecnologia-termomecanica/?originalSubdomain=br"
+            target="_blank"
+            ><img src="../assets/in-ftt.png" alt="linkedin-ftt"
+          /></a>
         </div>
       </div>
       <img
@@ -53,32 +67,31 @@ footer {
   right: 0;
 }
 
-@media (max-width: 768px){
-.main-footer{
+@media (max-width: 768px) {
+  .main-footer {
     align-items: flex-start;
   }
 
   .linhas-footer {
     width: 185px;
-  } 
+  }
 
   .logos-ftt {
     margin-bottom: 25px;
     display: flex;
   }
 
-  .logos-ftt img{
+  .logos-ftt img {
     height: 33px;
   }
 
   .redes-ftt {
     display: flex;
   }
-  
 }
 
 @media (max-width: 425px) {
-  .main-footer{
+  .main-footer {
     margin: 80px 292px 0 40px;
   }
 }

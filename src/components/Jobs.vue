@@ -3,121 +3,40 @@
     <section class="container">
       <div class="row">
         <div class="col-12">
-          <h2>
+          <h2 v-if="empresa.jobs.length > 0">
             Painel de
             <span style="color: #72B73B;">vagas</span>
           </h2>
-          <div class="conteudo">
-            <p class="text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book
+          <div :key="job.id" v-for="job in empresa.jobs" class="conteudo">
+            <p class="text" :class="displayClass(job.text)">
+              {{ job.text }}
             </p>
             <div class="row footer-card">
-              <div class="link-text">
+              <div :class="displayClass(job.email)" class="link-text">
                 <a href>
                   <img
                     src="../assets/email.png"
                     alt="emailCompany"
                     class="img"
-                  />email@gmail.com
+                  />{{ job.email }}
                 </a>
               </div>
 
-              <div class="link-text">
+              <div :class="displayClass(job.site)" class="link-text">
                 <a href>
                   <img
                     src="../assets/link.png"
                     alt="linkCompany"
                     class="img"
-                  />processoseletivonestle.com
+                  />{{ job.site }}
                 </a>
               </div>
 
-              <div class="link-text">
+              <div :class="displayClass(job.position)" class="link-text">
                 <a href>
-                  <img
-                    src="../assets/person.png"
-                    alt="person"
-                    class="img"
-                  />Estágio
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="conteudo">
-            <p class="text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.
-            </p>
-            <div class="row footer-card">
-              <div class="link-text">
-                <a href>
-                  <img
-                    src="../assets/email.png"
-                    alt="emailCompany"
-                    class="img"
-                  />email@gmail.com
-                </a>
-              </div>
-
-              <div class="link-text">
-                <a href>
-                  <img
-                    src="../assets/link.png"
-                    alt="linkCompany"
-                    class="img"
-                  />processoseletivonestle.com
-                </a>
-              </div>
-
-              <div class="link-text">
-                <a href>
-                  <img src="../assets/person.png" alt="person" class="img" />CLT
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="conteudo">
-            <p class="text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book
-            </p>
-            <div class="row footer-card">
-              <div class="link-text">
-                <a href>
-                  <img
-                    src="../assets/email.png"
-                    alt="emailCompany"
-                    class="img"
-                  />email@gmail.com
-                </a>
-              </div>
-
-              <div class="link-text">
-                <a href>
-                  <img
-                    src="../assets/link.png"
-                    alt="linkCompany"
-                    class="img"
-                  />processoseletivonestle.com
-                </a>
-              </div>
-
-              <div class="link-text">
-                <a href>
-                  <img src="../assets/person.png" alt="person" class="img" />CLT
+                  <img src="../assets/person.png" alt="person" class="img" />{{
+                    job.position
+                  }}
                 </a>
               </div>
             </div>
@@ -129,13 +48,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    empresa: Object,
+  },
+  methods: {
+    displayClass(value) {
+      return !value ? "display-none" : "";
+    },
+  },
+};
 </script>
 
 <style scoped>
 h2 {
-  font-family: Poppins;
-  font-style: normal;
   font-weight: normal;
   font-size: 32px;
   line-height: 45px;
@@ -144,8 +70,6 @@ h2 {
 p {
   color: #757575;
   padding: 30px 35px;
-  font-family: Poppins;
-  font-style: normal;
   font-weight: normal;
   line-height: 26px;
 }
@@ -153,6 +77,10 @@ p {
 a {
   text-decoration: none;
   color: #757575;
+}
+
+.display-none {
+  display: none;
 }
 
 .container {

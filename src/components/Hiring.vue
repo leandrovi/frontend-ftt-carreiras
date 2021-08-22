@@ -9,23 +9,24 @@
 
           <div class="conteudo">
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book
+              {{ empresa.interview.text }}
             </p>
             <br />
             <div class="links">
-              <a href="#"
+              <a
+                :class="displayClass(empresa.interview.link_1)"
+                :href="empresa.interview.link_1"
+                target="_blank"
                 ><img src="../assets/icon-link.png" alt="" />
-                https://processoseletivonestle.com.br/</a
+                <label>{{ empresa.interview.link_1 }}</label></a
               >
 
-              <a href="#"
-                ><img
-                  src="../assets/icon-link.png"
-                  alt=""
-                />https://processoseletivonestle.com.br/</a
+              <a
+                :class="displayClass(empresa.interview.link_2)"
+                :href="empresa.interview.link_2"
+                target="_blank"
+                ><img src="../assets/icon-link.png" alt="" />
+                <label>{{ empresa.interview.link_2 }}</label></a
               >
             </div>
           </div>
@@ -36,7 +37,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    empresa: Object,
+  },
+  methods: {
+    displayClass(link) {
+      return !link ? "display-none" : "";
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -52,6 +62,10 @@ p {
   font-style: normal;
   font-weight: normal;
   line-height: 26px;
+}
+
+.display-none {
+  display: none !important;
 }
 
 .conteudo {

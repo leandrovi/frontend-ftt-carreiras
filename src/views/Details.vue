@@ -1,10 +1,10 @@
 <template>
   <div>
-    <HeaderCompany :empresa="empresa" />
-    <AboutCompanies />
-    <Hiring />
-    <Jobs />
-    <Information />
+    <HeaderCompany :empresa="empresa" :url="url" />
+    <AboutCompanies :empresa="empresa" />
+    <Hiring :empresa="empresa" />
+    <Jobs :empresa="empresa" />
+    <Information :empresa="empresa" />
   </div>
 </template>
 
@@ -23,11 +23,23 @@ export default {
     Jobs,
     Information,
   },
-  props: {
-    empresa: Object,
+  data() {
+    return {
+      empresa: {},
+      url: "https://ftt-carreiras.herokuapp.com",
+    };
   },
-  created() {
-    console.log("Aqui --->", this.empresa);
+  methods: {
+    async fetchEmpresa(id) {
+      const res = await fetch(
+        `https://ftt-carreiras.herokuapp.com/empresas/${id}`,
+      );
+      const data = await res.json();
+      return data;
+    },
+  },
+  async created() {
+    this.empresa = await this.fetchEmpresa(this.$route.params.id);
   },
 };
 </script>

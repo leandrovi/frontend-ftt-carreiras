@@ -30,14 +30,6 @@ export default {
 
       return data;
     },
-    async fetchEmpresa(id) {
-      const res = await fetch(
-        `https://ftt-carreiras.herokuapp.com/empresas/${id}`,
-      );
-      const data = await res.json();
-
-      return data;
-    },
   },
   async created() {
     this.empresas = await this.fetchEmpresas();

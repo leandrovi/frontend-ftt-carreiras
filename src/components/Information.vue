@@ -1,6 +1,6 @@
 <template>
   <div class="information">
-    <section class="container">
+    <section class="container" :class="displayClass(empresa.additional_info)">
       <div class="row">
         <div class="col-12">
           <h2>
@@ -10,25 +10,26 @@
 
           <div class="conteudo">
             <p class="text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book
+              {{ empresa.additional_info }}
             </p>
           </div>
         </div>
       </div>
-      <!--Início "Nossos processos seletivos"-->
     </section>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    empresa: Object,
+  },
+  methods: {
+    displayClass(text) {
+      return !text ? "display-none" : "";
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -36,7 +37,7 @@ h2 {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 45px;
 }
 
@@ -52,6 +53,10 @@ p {
 a {
   text-decoration: none;
   color: #757575;
+}
+
+.display-none {
+  display: none;
 }
 
 .container {

@@ -6,8 +6,10 @@
           ><img src="../assets/ftt-logo.png" alt="ftt-carreiras-logo"
         /></a>
         <div class="items-header">
-          <a href="/">Sobre</a>
-          <a href="/">Empresas</a>
+          <router-link :to="{ path: '/', hash: '#About' }">Sobre</router-link>
+          <router-link :to="{ path: '/', hash: '#Companies' }"
+            >Empresas</router-link
+          >
         </div>
       </div>
     </nav>
@@ -48,28 +50,27 @@ export default {};
   color: #212121;
 }
 
-@media (max-width: 768px){
-  .nav{
+@media (max-width: 768px) {
+  .nav {
     position: unset;
     padding-bottom: 20px;
   }
-  .main-header{
+  .main-header {
     margin: 0 40px;
     justify-content: center;
   }
-  
 }
 
 @media (max-width: 425px) {
-  .nav{
+  .nav {
     padding-top: 40px;
   }
 
-  .nav-logo img{
+  .nav-logo img {
     width: 228px;
   }
 
-  .main-header{
+  .main-header {
     margin: 0 40px;
     align-items: center;
     justify-content: center;
@@ -79,10 +80,8 @@ export default {};
     margin-top: 15px;
   }
 
-  .items-header a:first-child{
+  .items-header a:first-child {
     margin-left: 0px;
   }
-  
 }
-
 </style>

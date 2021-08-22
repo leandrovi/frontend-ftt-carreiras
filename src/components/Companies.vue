@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="Companies">
     <div class="companies-container">
       <div class="title-companies">
         <h1>Empresas<span> participantes</span></h1>
@@ -11,8 +11,9 @@
           class="company-group"
         >
           <router-link
-            v-bind:to="'/Details' + '/' + empresa.id"
-            :empresa="empresa"
+            :to="{
+              path: '/Details/' + empresa.id,
+            }"
           >
             <div class="logo-companies">
               <img :src="url + empresa.logo.url" alt="img-empresa" />

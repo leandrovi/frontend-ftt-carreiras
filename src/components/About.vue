@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="About">
     <div class="main-about">
       <div class="about">
         <div class="group-about">
@@ -36,7 +36,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "About",
+};
 </script>
 
 <style scoped>
