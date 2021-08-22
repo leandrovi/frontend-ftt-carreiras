@@ -79,7 +79,8 @@ p {
 }
 
 .container {
-  margin: 65px 90px 0 90px;
+  margin: 0 90px 0 90px;
+  padding-top: 160px;
 }
 
 .row {
@@ -114,6 +115,7 @@ p {
 
   .container {
     margin: 0 40px;
+    padding-top: 0;
   }
 
   .container p {

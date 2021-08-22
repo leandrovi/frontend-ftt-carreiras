@@ -188,6 +188,14 @@ a {
   align-items: center;
 }
 
+.footer-card div:first-child {
+  margin-bottom: 20px;
+}
+
+.footer-card div:nth-child(2) {
+  margin-bottom: 20px;
+}
+
 /* responsividade */
 @media (max-width: 768px) {
   h2 {
