@@ -42,6 +42,8 @@ export default {};
   font-weight: normal;
   font-size: 40px;
   color: #212121;
+  line-height: 45px;
+  margin-bottom: 20px;
 }
 
 .main-intro h1 span {
