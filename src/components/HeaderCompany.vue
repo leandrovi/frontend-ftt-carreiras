@@ -5,7 +5,7 @@
         <img src="../assets/linhas-esquerda.png" alt="linhas" />
       </div>
       <div class="headerCompany-info">
-        <h2>Nestlé Brasil Ltda.</h2>
+        <h2>Nestlé</h2>
         <a href="https://www.nestle.com.br/">
           https://www.nestle.com.br/
         </a>
@@ -27,7 +27,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  created() {
+    console.log("--->", this.empresa);
+  },
+};
 </script>
 
 <style scoped>

@@ -10,77 +10,17 @@
           v-for="empresa in empresas"
           class="company-group"
         >
-          <a>
+          <router-link
+            v-bind:to="'/Details' + '/' + empresa.id"
+            :empresa="empresa"
+          >
             <div class="logo-companies">
-              <img src="../assets/nestle.png" alt="img-empresa" />
-              <div class="background-companie"></div>
+              <img :src="url + empresa.logo.url" alt="img-empresa" />
+              <div class="background-company"></div>
             </div>
-          </a>
-          <div class="name-companies">Nestle</div>
+          </router-link>
+          <div class="name-companies">{{ empresa.name }}</div>
         </div>
-        <!-- <div class="company-group">
-          <a>
-            <div class="logo-companies">
-              <img src="../assets/pepsi.png" alt="" />
-              <div class="background-companie"></div>
-            </div>
-          </a>
-          <div class="name-companies">Pepsi</div>
-        </div>
-        <div class="company-group">
-          <a>
-            <div class="logo-companies">
-              <img src="../assets/microsoft.png" alt="" />
-              <div class="background-companie"></div>
-            </div>
-          </a>
-          <div class="name-companies">Microsoft</div>
-        </div>
-        <div class="company-group">
-          <a>
-            <div class="logo-companies">
-              <img src="../assets/coca.png" alt="" />
-              <div class="background-companie"></div>
-            </div>
-          </a>
-          <div class="name-companies">Coca-cola</div>
-        </div>
-        <div class="company-group">
-          <a>
-            <div class="logo-companies">
-              <img src="../assets/nestle.png" alt="" />
-              <div class="background-companie"></div>
-            </div>
-          </a>
-          <div class="name-companies">Nestle</div>
-        </div>
-        <div class="company-group">
-          <a>
-            <div class="logo-companies">
-              <img src="../assets/pepsi.png" alt="" />
-              <div class="background-companie"></div>
-            </div>
-          </a>
-          <div class="name-companies">Pepsi</div>
-        </div>
-        <div class="company-group">
-          <a>
-            <div class="logo-companies">
-              <img src="../assets/microsoft.png" alt="" />
-              <div class="background-companie"></div>
-            </div>
-          </a>
-          <div class="name-companies">Microsoft</div>
-        </div>
-        <div class="company-group">
-          <a>
-            <div class="logo-companies">
-              <img src="../assets/coca.png" alt="" />
-              <div class="background-companie"></div>
-            </div>
-          </a>
-          <div class="name-companies">Coca-cola</div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -88,11 +28,10 @@
 
 <script>
 export default {
+  name: "Companies",
   props: {
     empresas: Array,
-  },
-  created() {
-    console.log(this.empresas);
+    url: String,
   },
 };
 </script>
@@ -139,7 +78,7 @@ export default {
   cursor: pointer;
 }
 
-.companies .logo-companies:hover .background-companie {
+.companies .logo-companies:hover .background-company {
   -moz-transform: scale(1.1) skew(-22deg, 0deg);
   -webkit-transform: scale(1.1) skew(-22deg, 0deg);
   -o-transform: scale(1.1) skew(-22deg, 0deg);
@@ -156,7 +95,7 @@ export default {
   -o-transition: opacity 0.7s ease-out;
 }
 
-.background-companie {
+.background-company {
   opacity: 0;
   transition: opacity 0.7s ease-out;
   -moz-transition: opacity 0.7 ease-out;
@@ -164,30 +103,28 @@ export default {
   -o-transition: opacity 0.7s ease-out;
 }
 
-/* .companies .company-group:nth-child(4n+1) .logo-companies:hover .background-companie {
-  border: 5px solid #fc632f;
-} */
 .companies
   .company-group:nth-child(4n + 2)
   .logo-companies:hover
-  .background-companie {
+  .background-company {
   border: 5px solid #f9ca24;
 }
 .companies
   .company-group:nth-child(4n + 3)
   .logo-companies:hover
-  .background-companie {
+  .background-company {
   border: 5px solid #41bcce;
 }
 .companies
   .company-group:nth-child(4n + 4)
   .logo-companies:hover
-  .background-companie {
+  .background-company {
   border: 5px solid #72b73b;
 }
 
 .companies .logo-companies img {
   max-width: 240px;
+  max-height: 80px;
   position: absolute;
 }
 .companies .name-companies {

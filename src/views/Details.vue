@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderCompany />
+    <HeaderCompany :empresa="empresa" />
     <AboutCompanies />
     <Hiring />
     <Jobs />
@@ -22,6 +22,12 @@ export default {
     Hiring,
     Jobs,
     Information,
+  },
+  props: {
+    empresa: Object,
+  },
+  created() {
+    console.log("Aqui --->", this.empresa);
   },
 };
 </script>
