@@ -133,13 +133,19 @@ export default {
   font-size: 13px;
   margin-top: -15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 813px) {
   .companies .logo-companies {
     width: 275px;
     height: 150px;
   }
   .companies {
     margin: 0 100px;
+  }
+  .title-companies {
+    margin: 0 40px;
+  }
+  .title-companies h1{
+    font-size: 24px;
   }
 }
 @media (max-width: 425px) {
