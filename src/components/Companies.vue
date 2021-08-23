@@ -144,8 +144,12 @@ export default {
   .title-companies {
     margin: 0 40px;
   }
-  .title-companies h1{
+  .title-companies h1 {
     font-size: 24px;
+  }
+
+  .companies .logo-companies:hover .background-company {
+    opacity: 0;
   }
 }
 @media (max-width: 425px) {

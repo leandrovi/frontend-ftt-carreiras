@@ -50,35 +50,31 @@ export default {};
   color: #212121;
 }
 
-@media (max-width: 1140px){
-  .main-header{
+@media (max-width: 1140px) {
+  .main-header {
     flex-direction: column;
     width: 30%;
     align-items: flex-start;
   }
 
-  .main-header .items-header{
+  .main-header .items-header {
     margin-top: 15px;
   }
 
-  .main-header .items-header a:first-child{
+  .main-header .items-header a:first-child {
     margin-left: unset;
   }
 
-  .main-intro{
+  .main-intro {
     font-size: 36;
   }
 }
 
 @media (max-width: 860px) {
-  .main-header{
+  .main-header {
     flex-direction: row;
     width: unset;
     align-items: flex-end;
-  }
-
-  .main-header .items-header a:first-child{
-    margin-left: 30px;
   }
 
   .nav {
