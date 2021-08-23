@@ -77,6 +77,7 @@ p {
 a {
   text-decoration: none;
   color: #757575;
+  word-break: break-all;
 }
 
 .display-none {
@@ -99,6 +100,7 @@ a {
 .footer-card {
   padding-left: 33px;
   padding-bottom: 33px;
+  padding-right: 33px;
 }
 
 .img {
