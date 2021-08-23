@@ -91,7 +91,7 @@ export default {};
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 599px) {
   .nav {
     padding-top: 40px;
   }
@@ -104,6 +104,7 @@ export default {};
     margin: 0 40px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   .items-header {
@@ -111,7 +112,7 @@ export default {};
   }
 
   .main-header .items-header a:first-child {
-    margin-left: unset;
+    margin-left: 0px;
   }
 }
 </style>
