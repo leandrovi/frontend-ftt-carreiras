@@ -108,6 +108,11 @@ p {
   display: flex;
   margin-right: auto;
   align-items: center;
+  cursor: pointer;
+}
+
+.links a label{
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

@@ -23,7 +23,7 @@
               </div>
 
               <div :class="displayClass(job.site)" class="link-text">
-                <a href>
+                <a :href="job.site" target="_blank">
                   <img
                     src="../assets/link.png"
                     alt="linkCompany"
