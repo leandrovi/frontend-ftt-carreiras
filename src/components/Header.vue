@@ -85,6 +85,10 @@ export default {};
     margin: 0 40px;
     justify-content: center;
   }
+
+  .main-header .items-header a:first-child {
+    margin-left: 30px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -106,7 +110,7 @@ export default {};
     margin-top: 15px;
   }
 
-  .items-header a:first-child {
+  .main-header .items-header a:first-child {
     margin-left: unset;
   }
 }
