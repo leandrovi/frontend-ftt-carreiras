@@ -50,7 +50,7 @@ export default {};
   color: #212121;
 }
 
-@media (max-width: 1070px){
+@media (max-width: 1140px){
   .main-header{
     flex-direction: column;
     width: 30%;

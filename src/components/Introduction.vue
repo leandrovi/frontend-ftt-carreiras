@@ -88,7 +88,7 @@ export default {};
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 813px) {
   .container-intro {
     flex-direction: column;
     height: unset;
