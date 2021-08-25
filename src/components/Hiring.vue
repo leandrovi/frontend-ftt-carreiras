@@ -83,6 +83,10 @@ p {
   text-decoration: none;
 }
 
+.links a:hover {
+  text-decoration: underline;
+}
+
 .links a img {
   margin-right: 15px;
 }
@@ -111,7 +115,7 @@ p {
   cursor: pointer;
 }
 
-.links a label{
+.links a label {
   cursor: pointer;
 }
 
@@ -140,7 +144,7 @@ p {
 
   .links a {
     font-size: 13px;
-    word-break: break-word;
+    word-break: break-all;
   }
 }
 

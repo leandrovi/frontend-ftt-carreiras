@@ -23,7 +23,7 @@
               </div>
 
               <div :class="displayClass(job.site)" class="link-text">
-                <a :href="job.site" target="_blank">
+                <a :href="job.site" target="_blank" class="site">
                   <img
                     src="../assets/link.png"
                     alt="linkCompany"
@@ -78,6 +78,15 @@ a {
   text-decoration: none;
   color: #757575;
   word-break: break-all;
+  cursor: text;
+}
+
+.site {
+  cursor: pointer;
+}
+
+.site:hover {
+  text-decoration: underline;
 }
 
 .display-none {
@@ -108,7 +117,7 @@ a {
 }
 
 .link-text {
-  font-size: 14px;
+  font-size: 16px;
   margin-right: auto;
 }
 
