@@ -79,7 +79,6 @@ p {
   color: #757575;
   font-style: normal;
   font-weight: normal;
-  line-height: 26px;
   text-decoration: none;
 }
 
